@@ -1,13 +1,13 @@
 # **Exploratory data analysis of the National Emissions Inventory (NEI)** 
 
-Author: Nathan Choi
-Date: April 02 2022
-Course: Exploratory data analysis
+- Author: Nathan Choi
+- Date: April 02 2022
+- Course: Exploratory data analysis
 
 # Introduction: 
 Hello, this repo holds PNG files of plots constructed in R. There also R files that provide the code of how each PNG file was constructed. The goal of this repo is to fulfill the assignment for project 2 of the Coursera Exploratory data analysis course. In each section of this README is relevant information for the how, what, and why of the R and PNG files. 
 
-**A codebook is written and stored in this repo but is part of this README markdown. Find the Codebook.md in this repo for details of coding decisions.**
+**A codebook is written and stored in this repo but is not part of this README markdown. Find the Codebook.md in this repo for details of coding decisions.**
 
 # Data source: 
 The National Emissions Inventory (NEI) is a record produced by the Environmental Protection Agency (EPA). In it are measures of things like air pollutants across the United States. In this analysis, I review the measures of fine particulate matter with a diameter estimated to be 2.5 micrometers in length, known as "PM2.5". The NEI records being evaluated are specific to the years 1999, 2002, 2005, and 2008. 
@@ -21,8 +21,8 @@ The National Emissions Inventory (NEI) is a record produced by the Environmental
 Column names: 
 
 1. "SCC" 
-2. 2. "Data.Category" 
-3. 3. "Short.Name"          
+2. "Data.Category" 
+3. "Short.Name"          
 4. "EI.Sector"          
 5. "Option.Group"        
 6. "Option.Set"          
