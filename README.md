@@ -6,6 +6,8 @@ Course: Exploratory data analysis
 # Introduction: 
 Hello, this repo holds PNG files of plots constructed in R. There also R files that provide the code of how each PNG file was constructed. The goal of this repo is to fulfill the assignment for project 2 of the Coursera Exploratory data analysis course. In each section of this README is relevant information for the how, what, and why of the R and PNG files. 
 
+**A codebook is written and stored in this repo but is part of this README markdown. Find the Codebook.md in this repo for details of coding decisions.**
+
 # Data source: 
 The National Emissions Inventory (NEI) is a record produced by the Environmental Protection Agency (EPA). In it are measures of things like air pollutants across the United States. In this analysis, I review the measures of fine particulate matter with a diameter estimated to be 2.5 micrometers in length, known as "PM2.5". The NEI records being evaluated are specific to the years 1999, 2002, 2005, and 2008. 
 
@@ -52,6 +54,22 @@ Column names:
 4. Across the United States, how have emissions from coal combustion-related sources changed from 1999–2008?
 5. How have emissions from motor vehicle sources changed from 1999–2008 in Baltimore City?
 6. Compare emissions from motor vehicle sources in Baltimore City with emissions from motor vehicle sources in Los Angeles County, California (fips == "06037"). Which city has seen greater changes over time in motor vehicle emissions?
+
+# Submission
+Here I am describing the data each plot is aiming to suggest.
+**Zero values from the data were removed to support log10 transformation. This represented ~5% of the data points.**
+
+- Plot01.png shows on the left graph a dot plot of recorded data for each year. Using a linear model equation and representing the line of that equation onto the graph I am observiing a negative slope . On the right is a box plot of the same data, with the median value of year 1999 acting as the comparator. I see a shift in the median values downward for each subsequent year.
+
+- Plot02.png shows similar trends to Plot01.png; differences between the more global data and Baltimore is the range of values mainnly and a weaker slope in change. 
+
+- Plot03.png here are 4 graphs that represent the change through only a dot plot and linear model. For all four factors of data a negative slope is observed. The greatest change is observed on the "Point" source of data. 
+
+- Plot04.png in similar fashion to Plot01.png, the graphs on the left is a dot plot with a linear model and on the right a box plot with comparator (year 1999) median value as a horizontal axis. Observed is a positive trend for PM2.5 emission values. 
+
+- Plot05.png for motor vehicles that are defined by the categorization of 'Mobile' in the EI.Sector column of the metadata file "Source_Classification_Code", again a dot plot and box plot are provided. Again, a negative trend is observed in emissions.
+
+- Plot06.png when comparing between the changes in emission of PM2.5 values between Los Angeles and Baltimore for 'Mobile' classified EI.Sector values I observe a negative trend for both, but Los Angeles having almost 2.7 times the change over time. 
 
 
 
