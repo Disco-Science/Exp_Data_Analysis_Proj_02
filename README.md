@@ -1,35 +1,50 @@
-#Exploratory data analysis of the National Emissions Inventory (NEI)#
+# **Exploratory data analysis of the National Emissions Inventory (NEI)** 
 Author: Nathan Choi
 Date: April 02 2022
 Course: Exploratory data analysis
 
-#Introduction: 
+# Introduction: 
 Hello, this repo holds PNG files of plots constructed in R. There also R files that provide the code of how each PNG file was constructed. The goal of this repo is to fulfill the assignment for project 2 of the Coursera Exploratory data analysis course. In each section of this README is relevant information for the how, what, and why of the R and PNG files. 
 
-#Data source: 
+# Data source: 
 The National Emissions Inventory (NEI) is a record produced by the Environmental Protection Agency (EPA). In it are measures of things like air pollutants across the United States. In this analysis, I review the measures of fine particulate matter with a diameter estimated to be 2.5 micrometers in length, known as "PM2.5". The NEI records being evaluated are specific to the years 1999, 2002, 2005, and 2008. 
 
-Data structure: The NEI data is stored in RDS files provided by the course instructors; RDS is a file format that serializes R objects. The total memory allocation for the two files applied is ~32 MB. There are two RDS files. 
+# Data structure: 
 
-"Source_Classification_Code.rds" file loads a dataframe object of dimensions 11717 x 15. It holds additional metadata related to the "summarySCC_PM25.RDS" dataframe and is mapped to values by the SCC digit string, which is the first column of within it. Each vector (column) is loaded as a factor. Therefore, all the data within it is a string datatype. The dimensions are 11717 x 15.
+- **The NEI data is stored in RDS files provided by the course instructors; RDS is a file format that serializes R objects. The total memory allocation for the two files applied is ~32 MB. There are two RDS files. 
+
+- "Source_Classification_Code.rds" file loads a dataframe object of dimensions 11717 x 15. It holds additional metadata related to the "summarySCC_PM25.RDS" dataframe and is mapped to values by the SCC digit string, which is the first column of within it. Each vector (column) is loaded as a factor. Therefore, all the data within it is a string datatype. The dimensions are 11717 x 15.
 
 Column names: 
 
-1] "SCC"                 "Data.Category"       "Short.Name"          "EI.Sector"          
- [5] "Option.Group"        "Option.Set"          "SCC.Level.One"       "SCC.Level.Two"      
- [9] "SCC.Level.Three"     "SCC.Level.Four"      "Map.To"              "Last.Inventory.Year"
-[13] "Created_Date"        "Revised_Date"        "Usage.Notes" 
+1. "SCC" 
+2. 2. "Data.Category" 
+3. 3. "Short.Name"          
+4. "EI.Sector"          
+5. "Option.Group"        
+6. "Option.Set"          
+7. "SCC.Level.One"       
+8. "SCC.Level.Two"      
+9. "SCC.Level.Three"     
+10. "SCC.Level.Four"      
+11. "Map.To"              
+12. "Last.Inventory.Year"
+13. "Created_Date"        
+14. "Revised_Date"        
+15. "Usage.Notes" 
 
-"summarySCC_PM25.RDS" file loads a dataframe object of dimensions 6497651 x 6. It holds the values described below. 
+- "summarySCC_PM25.RDS" file loads a dataframe object of dimensions 6497651 x 6. It holds the values described below. 
 
-fips: A five-digit number (represented as a string) indicating the U.S. county
-SCC: The name of the source as indicated by a digit string (see source code classification table)
-Pollutant: A string indicating the pollutant
-Emissions: Amount of PM2.5 emitted, in tons
-type: The type of source (point, non-point, on-road, or non-road)
-year: The year of emissions recorded
+1. fips: A five-digit number (represented as a string) indicating the U.S. county
+2. SCC: The name of the source as indicated by a digit string (see source code classification table)
+3. Pollutant: A string indicating the pollutant
+4. Emissions: Amount of PM2.5 emitted, in tons
+5. type: The type of source (point, non-point, on-road, or non-road)
+6. year: The year of emissions recorded
 
-Assignment: The instructor has requested the following questions be answered through the visualization of the data. The .R file within this repo aims to return a PNG file that fulfills the assignment. 
+# Assignment: 
+
+- The instructor has requested the following questions be answered through the visualization of the data. The .R file within this repo aims to return a PNG file that fulfills the assignment. 
 
 1. Have total emissions from PM2.5 decreased in the United States from 1999 to 2008? Using the base plotting system, make a plot showing the total PM2.5 emission from all sources for each of the years 1999, 2002, 2005, and 2008.
 2. Have total emissions from PM2.5 decreased in the Baltimore City, Maryland (fips == "24510") from 1999 to 2008? Use the base plotting system to make a plot answering this question.
