@@ -11,7 +11,7 @@ The National Emissions Inventory (NEI) is a record produced by the Environmental
 
 # Data structure: 
 
-- **The NEI data is stored in RDS files provided by the course instructors; RDS is a file format that serializes R objects. The total memory allocation for the two files applied is ~32 MB. There are two RDS files. 
+- **The NEI data is stored in RDS files provided by the course instructors; RDS is a file format that serializes R objects. The total memory allocation for the two files applied is ~32 MB. There are two RDS files**. 
 
 - "Source_Classification_Code.rds" file loads a dataframe object of dimensions 11717 x 15. It holds additional metadata related to the "summarySCC_PM25.RDS" dataframe and is mapped to values by the SCC digit string, which is the first column of within it. Each vector (column) is loaded as a factor. Therefore, all the data within it is a string datatype. The dimensions are 11717 x 15.
 
